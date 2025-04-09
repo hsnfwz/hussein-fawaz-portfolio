@@ -216,10 +216,10 @@ export default function Home() {
         </Anchor>
       </Modal>
       <Modal show={modal && modal.type === 'ITEM_MODAL' && modal.item}>
-        <h2 className="w-full self-center text-center text-5xl uppercase">
+        <h2 className="w-full self-center text-center text-4xl uppercase">
           {modal && modal.item && modal.item.title}
         </h2>
-        <p>{modal && modal.item && modal.item.description}</p>
+        <p className="text-center">{modal && modal.item && modal.item.description}</p>
         <div className="flex w-full flex-wrap justify-center gap-1">
           {modal &&
             modal.item &&
@@ -256,16 +256,16 @@ export default function Home() {
           <div className="absolute -bottom-2 -left-2 -z-10 h-4 w-4 border-b border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
           <div className="absolute -right-2 -bottom-2 -z-10 h-4 w-4 border-r border-b border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
         </a>
-        <h1 className="absolute top-0 left-1/2 w-full -translate-x-1/2 border-b border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
+        <h1 className="absolute top-0 left-1/2 w-full -translate-x-1/2 border-b border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
           Hussein
         </h1>
-        <h1 className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 border-t border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
+        <h1 className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 border-t border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
           Hussein
         </h1>
-        <h1 className="app_vertical-text absolute top-0 left-0 h-full border-r border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
+        <h1 className="app_vertical-text absolute top-0 left-0 h-full border-r border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
           Fawaz
         </h1>
-        <h1 className="app_vertical-text absolute top-0 right-0 h-full border-l border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
+        <h1 className="app_vertical-text absolute top-0 right-0 h-full border-l border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
           Fawaz
         </h1>
       </section>
@@ -278,7 +278,7 @@ export default function Home() {
         </h3>
         <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
           <div className="flex flex-col gap-8 md:flex-row">
-            <h2 className="w-full self-center text-center text-5xl uppercase">
+            <h2 className="w-full self-center text-center text-4xl uppercase">
               3+ Years Professional Experience
             </h2>
             <p className="w-full">
@@ -292,7 +292,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-8 md:flex-row">
-            <h2 className="w-full self-center text-center text-5xl uppercase">
+            <h2 className="w-full self-center text-center text-4xl uppercase">
               Full-Stack Web Developer
             </h2>
             <p className="w-full">
@@ -305,7 +305,7 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-8 md:flex-row">
-            <h2 className="w-full self-center text-center text-5xl uppercase">
+            <h2 className="w-full self-center text-center text-4xl uppercase">
               Outgoing Personality
             </h2>
             <p className="w-full">
@@ -327,7 +327,7 @@ export default function Home() {
           Experience
         </h3>
         <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <h2 className="w-full self-center text-center text-5xl uppercase">
+          <h2 className="w-full self-center text-center text-4xl uppercase">
             Industry
           </h2>
           <a
@@ -377,7 +377,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <h2 className="w-full self-center text-center text-5xl uppercase">
+          <h2 className="w-full self-center text-center text-4xl uppercase">
             Freelance
           </h2>
         </div>
@@ -387,7 +387,7 @@ export default function Home() {
           ))}
         </HorizontalScrollGrid>
         <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <h2 className="w-full self-center text-center text-5xl uppercase">
+          <h2 className="w-full self-center text-center text-4xl uppercase">
             Projects
           </h2>
         </div>
@@ -406,7 +406,7 @@ export default function Home() {
         </h3>
         <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
           <div className="flex flex-col gap-8">
-            <h2 className="w-full self-center text-center text-5xl uppercase">
+            <h2 className="w-full self-center text-center text-4xl uppercase">
               Let's Connect!
             </h2>
             <p>
