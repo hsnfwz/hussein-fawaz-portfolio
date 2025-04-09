@@ -1,2 +1,86 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+@import 'tailwindcss';
+
+@theme {
+  --font-montserrat: 'Montserrat';
+  --font-lato: 'Lato';
+  --font-bodoni: 'Bodoni Moda';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+h1 {
+  font-family: var(--font-bodoni);
+  font-weight: var(--font-weight-normal);
+}
+
+h2 {
+  font-family: var(--font-bodoni);
+  font-weight: var(--font-weight-bold);
+}
+
+h3 {
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-normal);
+}
+
+button,
+a {
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-normal);
+}
+
+span,
+p,
+ul,
+li {
+  font-family: var(--font-montserrat);
+  font-weight: var(--font-weight-normal);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: oklch(0.922 0 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.708 0 0);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.app_hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.app_hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.app_vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}

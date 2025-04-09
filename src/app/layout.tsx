@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
+import { ModalContextProvider } from '@/contexts/ModalContextProvider';
 
 export const metadata: Metadata = {
-  title: "Hussein Fawaz",
-  description: "Full Stack Software Developer | 3 Years Experience | Designing and Building Exceptional User Experiences",
+  title: 'Hussein Fawaz',
+  description:
+    'Full Stack Software Developer | 3 Years Experience | Designing and Building Exceptional User Experiences',
 };
 
-export default function RootLayout({
+function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -14,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <ModalContextProvider>{children}</ModalContextProvider>
       </body>
     </html>
   );
 }
+
+export default RootLayout;
