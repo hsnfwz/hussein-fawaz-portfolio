@@ -1,24 +1,24 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 
 const useIntersection = (threshold = 0.1) => {
-  const [intersectingElement, setIntersectingElement] = useState(null);
-  const [elementNode, setElementNode] = useState(null);
-  const [observer, setObserver] = useState(null);
-  const elementNodeTimerRef = useRef(null);
+  const [intersectingElement, setIntersectingElement] = useState<IntersectionObserverEntry | null>(null);
+  const [elementNode, setElementNode] = useState<Element | null>(null);
+  const [observer, setObserver] = useState<IntersectionObserver | null>(null);
+  // const elementNodeTimerRef = useRef();
 
-  const elementRef = useCallback((node: any) => {
+  const elementRef = useCallback((node: HTMLElement) => {
     if (node && node !== elementNode) {
-      clearTimeout(elementNodeTimerRef.current);
-      elementNodeTimerRef.current = setTimeout(() => {
+      // window.clearTimeout(elementNodeTimerRef.current);
+      // elementNodeTimerRef.current = window.setTimeout(() => {
         setElementNode(node);
-      }, 1000);
+      // }, 1000);
     }
   }, []);
 
   useEffect(() => {
-    const intersectionObserver: any = new IntersectionObserver(
+    const intersectionObserver: IntersectionObserver = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
           if (entry.isIntersecting) {
             setIntersectingElement(entry);
           } else {

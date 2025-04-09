@@ -1,16 +1,19 @@
 'use client';
 
-import { ModalContext } from '@/contexts/ModalContextProvider';
-import { Info, Menu, X } from 'lucide-react';
-import { useContext } from 'react';
+import { Menu } from 'lucide-react';
+import useModalContext from '@/hooks/useModalContext';
+import useIntersection from '@/hooks/useIntersection';
 import Modal from '@/components/Modal';
 import Button from '@/components/Button';
 import Anchor from '@/components/Anchor';
 import HorizontalScrollGrid from '@/components/HorizontalScrollGrid';
 import HorizontalScrollCard from '@/components/HorizontalScrollCard';
+import { useEffect } from 'react';
 
 export default function Home() {
-  const { modal, setModal }: any = useContext(ModalContext);
+  const { modal, setModal } = useModalContext();
+  const [elementRef, intersectingElement] = useIntersection();
+  useEffect(() => console.log(elementRef), [intersectingElement]);
 
   // todo: animate your name to transition between first and last
 
@@ -64,8 +67,7 @@ export default function Home() {
       mobileImage: './images/sakina-mobile.png',
       desktopImage: './images/sakina.png',
       title: 'Sakina',
-      description:
-        'Video streaming and discussions platform.',
+      description: 'Video streaming and discussions platform.',
       tags: [
         'HTML',
         'CSS',
@@ -74,7 +76,7 @@ export default function Home() {
         'React',
         'Supabase',
         'Vercel',
-        'Vimeo API'
+        'Vimeo API',
       ],
     },
     {
@@ -83,7 +85,7 @@ export default function Home() {
       githubServer: null,
       mobileImage: './images/cellystats-mobile.png',
       desktopImage: './images/cellystats.png',
-      title: "CellyStats",
+      title: 'CellyStats',
       description:
         'Search, view, and compare National Hockey League (NHL) player statistics with visual breakdowns.',
       tags: [
@@ -104,7 +106,7 @@ export default function Home() {
       githubServer: null,
       mobileImage: './images/bctransit-mobile.png',
       desktopImage: './images/bctransit.png',
-      title: "BC Transit",
+      title: 'BC Transit',
       description:
         'View real-time transit routes and vehicles in British Columbia.',
       tags: [
@@ -126,7 +128,7 @@ export default function Home() {
       githubServer: 'https://github.com/hsnfwz/piggysave-server',
       mobileImage: './images/piggysave-mobile.png',
       desktopImage: './images/piggysave.png',
-      title: "PiggySave",
+      title: 'PiggySave',
       description:
         'Track and calculate your income and expenses and view trends with visual breakdowns.',
       tags: [
@@ -142,7 +144,7 @@ export default function Home() {
         'Neon',
         'Render',
         'Auth0',
-        'Recharts'
+        'Recharts',
       ],
     },
     {
@@ -151,7 +153,7 @@ export default function Home() {
       githubServer: null,
       mobileImage: './images/chartmaker-mobile.png',
       desktopImage: './images/chartmaker.png',
-      title: "Chart Maker",
+      title: 'Chart Maker',
       description:
         'Create bar, line, and area charts and export as PNG or JPEG.',
       tags: [
@@ -172,9 +174,8 @@ export default function Home() {
       githubServer: null,
       mobileImage: './images/husseinfawazportfolio-mobile.png',
       desktopImage: './images/husseinfawazportfolio.png',
-      title: "Hussein Fawaz Portfolio",
-      description:
-        'Official portfolio of Hussein Fawaz.',
+      title: 'Hussein Fawaz Portfolio',
+      description: 'Official portfolio of Hussein Fawaz.',
       tags: [
         'HTML',
         'CSS',
@@ -192,32 +193,25 @@ export default function Home() {
       githubServer: null,
       mobileImage: './images/zeinabfawazportfolio-mobile.png',
       desktopImage: './images/zeinabfawazportfolio.png',
-      title: "Zeinab Fawaz Portfolio",
-      description:
-        'Official portfolio of Zeinab Fawaz.',
-      tags: [
-        'HTML',
-        'CSS',
-        'Tailwind CSS',
-        'JavaScript',
-        'Vercel',
-      ],
+      title: 'Zeinab Fawaz Portfolio',
+      description: 'Official portfolio of Zeinab Fawaz.',
+      tags: ['HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'Vercel'],
     },
   ];
 
   return (
     <main className="flex flex-col gap-16 overflow-auto">
       <Modal show={modal && modal.type === 'NAV_MODAL'}>
-        <Anchor handleClick={() => setModal({ type: '' })} to="#home">
+        <Anchor handleClick={() => setModal(null)} to="#home">
           home
         </Anchor>
-        <Anchor handleClick={() => setModal({ type: '' })} to="#about">
+        <Anchor handleClick={() => setModal(null)} to="#about">
           about
         </Anchor>
-        <Anchor handleClick={() => setModal({ type: '' })} to="#experience">
+        <Anchor handleClick={() => setModal(null)} to="#experience">
           experience
         </Anchor>
-        <Anchor handleClick={() => setModal({ type: '' })} to="#contact">
+        <Anchor handleClick={() => setModal(null)} to="#contact">
           contact
         </Anchor>
       </Modal>
@@ -262,16 +256,16 @@ export default function Home() {
           <div className="absolute -bottom-2 -left-2 -z-10 h-4 w-4 border-b border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
           <div className="absolute -right-2 -bottom-2 -z-10 h-4 w-4 border-r border-b border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
         </a>
-        <h1 className="transition-all duration-300 absolute top-0 left-1/2 w-full -translate-x-1/2 border-b border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase md:text-7xl">
+        <h1 className="absolute top-0 left-1/2 w-full -translate-x-1/2 border-b border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
           Hussein
         </h1>
-        <h1 className="transition-all duration-300 absolute bottom-0 left-1/2 w-full -translate-x-1/2 border-t border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase md:text-7xl">
+        <h1 className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 border-t border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
           Hussein
         </h1>
-        <h1 className="transition-all duration-300 app_vertical-text absolute top-0 left-0 h-full border-r border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase md:text-7xl">
+        <h1 className="app_vertical-text absolute top-0 left-0 h-full border-r border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
           Fawaz
         </h1>
-        <h1 className="transition-all duration-300 app_vertical-text absolute top-0 right-0 h-full border-l border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase md:text-7xl">
+        <h1 className="app_vertical-text absolute top-0 right-0 h-full border-l border-black bg-neutral-100 p-4 text-center text-5xl text-black uppercase transition-all duration-300 md:text-7xl">
           Fawaz
         </h1>
       </section>
@@ -389,46 +383,7 @@ export default function Home() {
         </div>
         <HorizontalScrollGrid>
           {freelanceItems.map((item, index) => (
-            <HorizontalScrollCard key={index}>
-              <a
-                className="group relative top-0 left-0 mx-2 block w-[200px] snap-start border border-transparent focus:border focus:border-black focus:ring-0 focus:outline-none md:w-[800px]"
-                href={item.website}
-                target="_blank"
-              >
-                <picture>
-                  <source
-                    media="(min-width:768px)"
-                    srcSet={item.desktopImage}
-                  />
-                  <img
-                    src={item.mobileImage}
-                    alt={item.title}
-                    style={{ width: 'auto' }}
-                    className="w-full bg-white/50 object-cover object-center shadow backdrop-blur-lg"
-                  />
-                </picture>
-                <div className="absolute -top-2 -left-2 -z-10 h-4 w-4 border-t border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-                <div className="absolute -top-2 -right-2 -z-10 h-4 w-4 border-t border-r border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-                <div className="absolute -bottom-2 -left-2 -z-10 h-4 w-4 border-b border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-                <div className="absolute -right-2 -bottom-2 -z-10 h-4 w-4 border-r border-b border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-              </a>
-              <div className="w-full flex gap-8">
-                <Anchor to={item.githubClient} target="_blank">
-                  {item.githubServer ? 'Client Code' : 'Code'}
-                </Anchor>
-                {item.githubServer && (
-                  <Anchor to={item.githubServer} target="_blank">
-                    Server Code
-                  </Anchor>
-                )}
-                <Button
-                  isRound={true}
-                  handleClick={() => setModal({ type: 'ITEM_MODAL', item })}
-                >
-                  <Info />
-                </Button>
-              </div>
-            </HorizontalScrollCard>
+            <HorizontalScrollCard key={index} item={item} />
           ))}
         </HorizontalScrollGrid>
         <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
@@ -438,46 +393,7 @@ export default function Home() {
         </div>
         <HorizontalScrollGrid>
           {projectItems.map((item, index) => (
-            <HorizontalScrollCard key={index}>
-              <a
-                className="group relative top-0 left-0 mx-2 block w-[200px] snap-start border border-transparent focus:border focus:border-black focus:ring-0 focus:outline-none md:w-[800px]"
-                href={item.website}
-                target="_blank"
-              >
-                <picture>
-                  <source
-                    media="(min-width:768px)"
-                    srcSet={item.desktopImage}
-                  />
-                  <img
-                    src={item.mobileImage}
-                    alt={item.title}
-                    style={{ width: 'auto' }}
-                    className="w-full bg-white/50 object-cover object-center shadow backdrop-blur-lg"
-                  />
-                </picture>
-                <div className="absolute -top-2 -left-2 -z-10 h-4 w-4 border-t border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-                <div className="absolute -top-2 -right-2 -z-10 h-4 w-4 border-t border-r border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-                <div className="absolute -bottom-2 -left-2 -z-10 h-4 w-4 border-b border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-                <div className="absolute -right-2 -bottom-2 -z-10 h-4 w-4 border-r border-b border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-              </a>
-              <div className="w-full flex gap-8">
-                <Anchor to={item.githubClient} target="_blank">
-                  {item.githubServer ? 'Client Code' : 'Code'}
-                </Anchor>
-                {item.githubServer && (
-                  <Anchor to={item.githubServer} target="_blank">
-                    Server Code
-                  </Anchor>
-                )}
-                <Button
-                  isRound={true}
-                  handleClick={() => setModal({ type: 'ITEM_MODAL', item })}
-                >
-                  <Info />
-                </Button>
-              </div>
-            </HorizontalScrollCard>
+            <HorizontalScrollCard key={index} item={item} />
           ))}
         </HorizontalScrollGrid>
       </section>

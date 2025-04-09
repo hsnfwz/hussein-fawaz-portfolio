@@ -94,7 +94,7 @@ function Modal({ children, isDisabled, show, handleClose }: any) {
       className={`fixed top-0 left-0 z-50 h-screen w-full overflow-y-auto bg-black/75 p-4 backdrop-blur-lg ${show ? 'block' : 'hidden'}`}
       onClick={handleModalClickOutside}
     >
-      <div className="m-auto flex w-full flex-col gap-4 rounded-lg bg-white p-4 max-w-[1024px]">
+      <div className="m-auto flex w-full max-w-[1024px] flex-col gap-4 rounded-lg bg-white p-4">
         <div className="flex justify-end">
           <Button
             isRound={true}
@@ -104,7 +104,7 @@ function Modal({ children, isDisabled, show, handleClose }: any) {
             <X />
           </Button>
         </div>
-        <div className="mx-auto flex h-full w-full flex-col gap-8 items-center">
+        <div className="mx-auto flex h-full w-full flex-col items-center gap-8">
           {children}
         </div>
       </div>
