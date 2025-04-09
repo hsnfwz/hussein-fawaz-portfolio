@@ -1,13 +1,13 @@
 'use client';
 
-import { useContext, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { X } from 'lucide-react';
-import { ModalContext } from '@/contexts/ModalContextProvider';
 import Button from '@/components/Button';
+import useModalContext from '@/hooks/useModalContext';
 
 function Modal({ children, isDisabled, show, handleClose }: any) {
-  const { setModal }: any = useContext(ModalContext);
-  const modalRef = useRef(null);
+  const { setModal } = useModalContext();
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (show) {
@@ -16,8 +16,9 @@ function Modal({ children, isDisabled, show, handleClose }: any) {
       const focusableElements = modalRef.current?.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
+
+      const firstElement: any = focusableElements && focusableElements[0];
+      const lastElement: any = focusableElements && focusableElements[focusableElements.length - 1];
 
       firstElement.focus();
 
@@ -83,7 +84,7 @@ function Modal({ children, isDisabled, show, handleClose }: any) {
   function closeModal() {
     if (!isDisabled) {
       if (handleClose) handleClose();
-      setModal({ type: '', item: null });
+      setModal(null);
       enableBodyScroll();
     }
   }
