@@ -16,6 +16,7 @@ export default function Home() {
   useEffect(() => console.log(elementRef), [intersectingElement]);
 
   // todo: animate your name to transition between first and last
+  // todo: fix chevron button movement scroll for mobile
 
   const freelanceItems = [
     {
@@ -61,6 +62,30 @@ export default function Home() {
 
   const projectItems = [
     {
+      website: 'https://filmfest-2025.vercel.app/',
+      githubClient: 'https://github.com/hsnfwz/movies',
+      githubServer: null,
+      mobileImage: './images/filmfest-mobile.png',
+      desktopImage: './images/filmfest.png',
+      title: 'FilmFest',
+      description: 'Track and rate movies and create collaborative lists with friends and family!',
+      tags: [
+        'HTML',
+        'CSS',
+        'Tailwind CSS',
+        'JavaScript',
+        'React',
+        'Next.js',
+        'SQL',
+        'Neon',
+        'Resend',
+        'React Email',
+        'Vercel',
+        'Auth0',
+        'TMDB API',
+      ],
+    },
+    {
       website: 'https://sakina-one.vercel.app/',
       githubClient: 'https://github.com/hsnfwz/sakina',
       githubServer: null,
@@ -78,6 +103,7 @@ export default function Home() {
         'Vercel',
         'Vimeo API',
       ],
+      isWorkInProgress: true,
     },
     {
       website: 'https://cellystats.vercel.app/',
@@ -167,6 +193,7 @@ export default function Home() {
         'Vercel',
         'Recharts',
       ],
+      isWorkInProgress: true,
     },
     {
       website: 'https://www.husseinfawaz.ca/',
