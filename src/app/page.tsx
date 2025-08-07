@@ -318,8 +318,8 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
-                autoPlay
+                // controls
+                // autoPlay
                 loop
                 playsInline
               >
@@ -342,8 +342,8 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
-                autoPlay
+                // controls
+                // autoPlay
                 loop
                 playsInline
               >
@@ -366,8 +366,8 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
-                autoPlay
+                // controls
+                // autoPlay
                 loop
                 playsInline
               >
@@ -390,8 +390,8 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
-                autoPlay
+                // controls
+                // autoPlay
                 loop
                 playsInline
               >
@@ -414,8 +414,8 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
-                autoPlay
+                // controls
+                // autoPlay
                 loop
                 playsInline
               >
@@ -438,8 +438,8 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
-                autoPlay
+                // controls
+                // autoPlay
                 loop
                 playsInline
               >
