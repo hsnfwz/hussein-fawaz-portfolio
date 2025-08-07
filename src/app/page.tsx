@@ -320,6 +320,7 @@ export default function Home() {
                 controls
                 autoPlay
                 loop
+                playsInline
               >
                 <source src="/rembump_demo.mp4" type="video/mp4" />
               </video>
@@ -344,6 +345,7 @@ export default function Home() {
                 controls
                 autoPlay
                 loop
+                playsInline
               >
                 <source src="/noureddinefeathers_demo.mp4" type="video/mp4" />
               </video>
@@ -368,6 +370,7 @@ export default function Home() {
                 controls
                 autoPlay
                 loop
+                playsInline
               >
                 <source src="/filmfest_demo.mp4" type="video/mp4" />
               </video>
@@ -392,6 +395,7 @@ export default function Home() {
                 controls
                 autoPlay
                 loop
+                playsInline
               >
                 <source src="/cellystats_demo.mp4" type="video/mp4" />
               </video>
@@ -416,6 +420,7 @@ export default function Home() {
                 controls
                 autoPlay
                 loop
+                playsInline
               >
                 <source src="/quickreport_demo.mp4" type="video/mp4" />
               </video>
@@ -440,6 +445,7 @@ export default function Home() {
                 controls
                 autoPlay
                 loop
+                playsInline
               >
                 <source src="/quickchart_demo.mp4" type="video/mp4" />
               </video>
