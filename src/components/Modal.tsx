@@ -18,7 +18,8 @@ function Modal({ children, isDisabled, show, handleClose }: any) {
       );
 
       const firstElement: any = focusableElements && focusableElements[0];
-      const lastElement: any = focusableElements && focusableElements[focusableElements.length - 1];
+      const lastElement: any =
+        focusableElements && focusableElements[focusableElements.length - 1];
 
       firstElement.focus();
 
