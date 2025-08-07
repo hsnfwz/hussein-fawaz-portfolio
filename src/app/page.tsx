@@ -221,7 +221,7 @@ export default function Home() {
   return (
     <main className="relative flex flex-col gap-16">
       <nav className="fixed top-0 z-50 w-full border-y border-t-transparent border-b-neutral-100 bg-white px-4">
-        <div className="m-auto flex w-full max-w-[1024px]">
+        <div className="m-auto flex w-full max-w-[1280px]">
           <Link
             onMouseDown={(event) => event.preventDefault()}
             className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
@@ -256,7 +256,7 @@ export default function Home() {
         id="home"
         className="flex h-full min-h-screen w-full items-center justify-center p-4"
       >
-        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+        <div className="m-auto flex w-full max-w-[1280px] flex-col gap-8">
           <h1 className="text-5xl lowercase sm:text-7xl">Hussein Fawaz</h1>
 
           <div className="flex flex-col gap-4">
@@ -271,7 +271,7 @@ export default function Home() {
         id="experience"
         className="flex h-full min-h-screen w-full items-center justify-center p-4"
       >
-        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+        <div className="m-auto flex w-full max-w-[1280px] flex-col gap-8">
           <h1 className="text-5xl lowercase sm:text-7xl">Experience</h1>
           <div className="flex flex-col gap-4">
             <h2 className="lowercase">
@@ -303,7 +303,7 @@ export default function Home() {
         id="projects"
         className="flex h-full min-h-screen w-full items-center justify-center p-4"
       >
-        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+        <div className="m-auto flex w-full max-w-[1280px] flex-col gap-8">
           <h1 className="text-5xl lowercase sm:text-7xl">Projects</h1>
           <h2 className="lowercase">
             Specialized in Figma, HTML, CSS, Tailwind CSS, JavaScript,
@@ -318,7 +318,7 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
+                // controls
                 autoPlay
                 loop
                 playsInline
@@ -343,7 +343,7 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
+                // controls
                 autoPlay
                 loop
                 playsInline
@@ -368,7 +368,7 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
+                // controls
                 autoPlay
                 loop
                 playsInline
@@ -393,7 +393,7 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
+                // controls
                 autoPlay
                 loop
                 playsInline
@@ -418,7 +418,7 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
+                // controls
                 autoPlay
                 loop
                 playsInline
@@ -443,7 +443,7 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                controls
+                // controls
                 autoPlay
                 loop
                 playsInline
@@ -464,16 +464,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <div className="p-4">
-        <div className="m-auto flex h-[1px] w-full max-w-[1024px] items-center justify-center rounded-full bg-neutral-100 text-9xl font-bold text-neutral-100">
-          3
-        </div>
-      </div> */}
       <section
         id="contact"
         className="flex h-full min-h-screen w-full items-center justify-center p-4"
       >
-        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+        <div className="m-auto flex w-full max-w-[1280px] flex-col gap-8">
           <h1 className="text-5xl lowercase sm:text-7xl">Contact</h1>
           <div className="flex flex-col gap-4">
             <h2 className="lowercase">
@@ -499,7 +494,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="m-auto w-full max-w-[1024px] p-4">
+      <footer className="m-auto w-full max-w-[1280px] p-4">
         <h2 className="text-xs lowercase">Copyright 2025 Hussein Fawaz</h2>
       </footer>
     </main>
