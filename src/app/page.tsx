@@ -293,6 +293,7 @@ export default function Home() {
             onMouseDown={(event) => event.preventDefault()}
             className="block items-center justify-center self-start border border-black p-4 text-center text-xs lowercase transition-all hover:bg-black hover:text-white focus:z-50 focus:border-black focus:ring-0 focus:outline-0 rounded"
             href="https://docs.google.com/document/d/1556_mPAxeexguFJGg-k6Kg3q0U8zdiHWkyLg1vZ53f4/export?format=pdf"
+            target="_blank" download
           >
             Download Resume
           </Link>
