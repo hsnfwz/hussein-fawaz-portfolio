@@ -318,9 +318,9 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                // controls
+                controls
                 // autoPlay
-                loop
+                // loop
                 playsInline
               >
               </video>
@@ -342,9 +342,9 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                // controls
+                controls
                 // autoPlay
-                loop
+                // loop
                 playsInline
               >
               </video>
@@ -366,9 +366,9 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                // controls
+                controls
                 // autoPlay
-                loop
+                // loop
                 playsInline
               >
               </video>
@@ -390,9 +390,9 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                // controls
+                controls
                 // autoPlay
-                loop
+                // loop
                 playsInline
               >
               </video>
@@ -414,9 +414,9 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                // controls
+                controls
                 // autoPlay
-                loop
+                // loop
                 playsInline
               >
               </video>
@@ -438,9 +438,9 @@ export default function Home() {
                 width=""
                 height=""
                 muted
-                // controls
+                controls
                 // autoPlay
-                loop
+                // loop
                 playsInline
               >
               </video>
