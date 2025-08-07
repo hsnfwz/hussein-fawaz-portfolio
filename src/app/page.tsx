@@ -410,7 +410,7 @@ export default function Home() {
             <div className="flex w-full flex-col gap-4">
               <video
                 className="w-full bg-black border border-black rounded"
-                src="/quickreport_demo.mp4"
+                src="/quickreport_demo_new.mp4"
                 width=""
                 height=""
                 muted
