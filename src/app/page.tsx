@@ -314,7 +314,7 @@ export default function Home() {
             <div className="flex w-full flex-col gap-4">
               <video
                 className="w-full bg-black border border-black rounded"
-                src="/rembump_demo.mp4"
+                src="/rembump_demo_new.mp4"
                 width=""
                 height=""
                 muted
@@ -338,7 +338,7 @@ export default function Home() {
             <div className="flex w-full flex-col gap-4">
               <video
                 className="w-full bg-black border border-black rounded"
-                src="/noureddinefeathers_demo.mp4"
+                src="/noureddinefeathers_demo_new.mp4"
                 width=""
                 height=""
                 muted
@@ -362,7 +362,7 @@ export default function Home() {
             <div className="flex w-full flex-col gap-4">
               <video
                 className="w-full bg-black border border-black rounded"
-                src="/filmfest_demo.mp4"
+                src="/filmfest_demo_new.mp4"
                 width=""
                 height=""
                 muted
@@ -386,7 +386,7 @@ export default function Home() {
             <div className="flex w-full flex-col gap-4">
               <video
                 className="w-full bg-black border border-black rounded"
-                src="/cellystats_demo.mp4"
+                src="/cellystats_demo_new.mp4"
                 width=""
                 height=""
                 muted
@@ -434,7 +434,7 @@ export default function Home() {
             <div className="flex w-full flex-col gap-4">
               <video
                 className="w-full bg-black border border-black rounded"
-                src="/quickchart_demo.mp4"
+                src="/quickchart_demo_new.mp4"
                 width=""
                 height=""
                 muted
