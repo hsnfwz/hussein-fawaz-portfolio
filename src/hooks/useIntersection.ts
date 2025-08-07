@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 
 const useIntersection = (threshold = 0.1) => {
-  const [intersectingElement, setIntersectingElement] = useState<IntersectionObserverEntry | null>(null);
+  const [intersectingElement, setIntersectingElement] =
+    useState<IntersectionObserverEntry | null>(null);
   const [elementNode, setElementNode] = useState<Element | null>(null);
   const [observer, setObserver] = useState<IntersectionObserver | null>(null);
   // const elementNodeTimerRef = useRef();
@@ -10,7 +11,7 @@ const useIntersection = (threshold = 0.1) => {
     if (node && node !== elementNode) {
       // window.clearTimeout(elementNodeTimerRef.current);
       // elementNodeTimerRef.current = window.setTimeout(() => {
-        setElementNode(node);
+      setElementNode(node);
       // }, 1000);
     }
   }, []);

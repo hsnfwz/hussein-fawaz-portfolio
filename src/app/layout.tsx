@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { ModalContextProvider } from '@/contexts/ModalContextProvider';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: 'Hussein Fawaz',
@@ -17,6 +18,7 @@ function RootLayout({
     <html lang="en">
       <body>
         <ModalContextProvider>{children}</ModalContextProvider>
+        <Analytics />
       </body>
     </html>
   );

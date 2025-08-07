@@ -1,22 +1,13 @@
 'use client';
 
-import { Menu } from 'lucide-react';
 import useModalContext from '@/hooks/useModalContext';
 import useIntersection from '@/hooks/useIntersection';
-import Modal from '@/components/Modal';
-import Button from '@/components/Button';
-import Anchor from '@/components/Anchor';
-import HorizontalScrollGrid from '@/components/HorizontalScrollGrid';
-import HorizontalScrollCard from '@/components/HorizontalScrollCard';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
-  const { modal, setModal } = useModalContext();
   const [elementRef, intersectingElement] = useIntersection();
   useEffect(() => console.log(elementRef), [intersectingElement]);
-
-  // todo: animate your name to transition between first and last
-  // todo: fix chevron button movement scroll for mobile
 
   const freelanceItems = [
     {
@@ -68,7 +59,8 @@ export default function Home() {
       mobileImage: './images/filmfest-mobile.png',
       desktopImage: './images/filmfest.png',
       title: 'FilmFest',
-      description: 'Track and rate movies and create collaborative lists with friends and family!',
+      description:
+        'Track and rate movies and create collaborative lists with friends and family!',
       tags: [
         'HTML',
         'CSS',
@@ -227,237 +219,281 @@ export default function Home() {
   ];
 
   return (
-    <main className="flex flex-col gap-16 overflow-auto">
-      <Modal show={modal && modal.type === 'NAV_MODAL'}>
-        <Anchor handleClick={() => setModal(null)} to="#home">
-          home
-        </Anchor>
-        <Anchor handleClick={() => setModal(null)} to="#about">
-          about
-        </Anchor>
-        <Anchor handleClick={() => setModal(null)} to="#experience">
-          experience
-        </Anchor>
-        <Anchor handleClick={() => setModal(null)} to="#contact">
-          contact
-        </Anchor>
-      </Modal>
-      <Modal show={modal && modal.type === 'ITEM_MODAL' && modal.item}>
-        <h2 className="w-full self-center text-center text-4xl uppercase">
-          {modal && modal.item && modal.item.title}
-        </h2>
-        <p className="text-center">{modal && modal.item && modal.item.description}</p>
-        <div className="flex w-full flex-wrap justify-center gap-1">
-          {modal &&
-            modal.item &&
-            modal.item.tags.map((tag: string, index: number) => (
-              <span
-                key={index}
-                className="rounded bg-neutral-100 px-2 py-1 text-black"
-              >
-                {tag}
-              </span>
-            ))}
+    <main className="relative flex flex-col gap-16">
+      <nav className="fixed top-0 z-50 w-full border-y border-t-transparent border-b-neutral-100 bg-white px-4">
+        <div className="m-auto flex w-full max-w-[1024px]">
+          <Link
+            onMouseDown={(event) => event.preventDefault()}
+            className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            href="#home"
+          >
+            Home
+          </Link>
+          <Link
+            onMouseDown={(event) => event.preventDefault()}
+            className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            href="#experience"
+          >
+            Experience
+          </Link>
+          <Link
+            onMouseDown={(event) => event.preventDefault()}
+            className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            href="#projects"
+          >
+            projects
+          </Link>
+          <Link
+            onMouseDown={(event) => event.preventDefault()}
+            className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            href="#contact"
+          >
+            Contact
+          </Link>
         </div>
-      </Modal>
-      <nav className="fixed top-4 right-4 z-40">
-        <Button
-          handleClick={() => setModal({ type: 'NAV_MODAL' })}
-          isRound={true}
-        >
-          <Menu />
-        </Button>
       </nav>
       <section
-        id="#home"
-        className="relative h-full min-h-screen w-full overflow-hidden"
+        id="home"
+        className="flex h-full min-h-screen w-full items-center justify-center p-4"
       >
-        <a
-          className="group absolute top-1/2 left-1/2 block w-full max-w-[200px] -translate-x-1/2 -translate-y-1/2 rotate-6 border border-transparent transition-all duration-300 hover:rotate-0 focus:border-black focus:ring-0 focus:outline-none md:max-w-[400px]"
-          href="https://www.linkedin.com/in/hsnfwz/"
-          target="_blank"
-        >
-          <img src="./images/headshot.png" className="w-full shadow" />
-          <div className="absolute -top-2 -left-2 -z-10 h-4 w-4 border-t border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-          <div className="absolute -top-2 -right-2 -z-10 h-4 w-4 border-t border-r border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-          <div className="absolute -bottom-2 -left-2 -z-10 h-4 w-4 border-b border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-          <div className="absolute -right-2 -bottom-2 -z-10 h-4 w-4 border-r border-b border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-        </a>
-        <h1 className="absolute top-0 left-1/2 w-full -translate-x-1/2 border-b border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
-          Hussein
-        </h1>
-        <h1 className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 border-t border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
-          Hussein
-        </h1>
-        <h1 className="app_vertical-text absolute top-0 left-0 h-full border-r border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
-          Fawaz
-        </h1>
-        <h1 className="app_vertical-text absolute top-0 right-0 h-full border-l border-black bg-neutral-100 p-4 text-center text-4xl text-black uppercase transition-all duration-300 md:text-7xl">
-          Fawaz
-        </h1>
-      </section>
-      <section
-        id="about"
-        className="relative top-0 left-0 flex w-full flex-col gap-16"
-      >
-        <h3 className="sticky top-0 z-30 w-full bg-neutral-100 p-4 text-center uppercase">
-          About
-        </h3>
-        <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <div className="flex flex-col gap-8 md:flex-row">
-            <h2 className="w-full self-center text-center text-4xl uppercase">
-              3+ Years Professional Experience
+        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+          <h1 className="text-5xl lowercase sm:text-7xl">Hussein Fawaz</h1>
+
+          <div className="flex flex-col gap-4">
+            <h2 className="lowercase">
+              Full Stack Software Developer | 4 Years Professional Experience |
+              Designing and Building Exceptional User Experiences
             </h2>
-            <p className="w-full">
-              I worked at a Vancouver-based startup company called Switchboard
-              and helped develop their software-as-a-service (SaaS), which
-              empowers companies in the commercial transportation industry
-              across North America to manage their fleets while staying
-              compliant with government regulations. I also worked as a
-              self-employed freelancer to deliver tailored websites to local
-              businesses and help excel their digital presence.
-            </p>
-          </div>
-          <div className="flex flex-col gap-8 md:flex-row">
-            <h2 className="w-full self-center text-center text-4xl uppercase">
-              Full-Stack Web Developer
-            </h2>
-            <p className="w-full">
-              I have a sound understanding of both front-end and back-end
-              software development, always learning to improve my knowledge and
-              skills through professional opportunities and personal projects to
-              deliver exceptional user experiences. I specialize in Figma, HTML,
-              CSS, Tailwind CSS, JavaScript, TypeScript, React, Next.js,
-              Node.js, Express.js, Supabase, and Vercel.
-            </p>
-          </div>
-          <div className="flex flex-col gap-8 md:flex-row">
-            <h2 className="w-full self-center text-center text-4xl uppercase">
-              Outgoing Personality
-            </h2>
-            <p className="w-full">
-              I love to spend my free time volunteering with my community,
-              watching hockey and cheering on the Vancouver Canucks, playing
-              volleyball and paddle-boarding with my friends in the summers,
-              weight-lifting at my local gym, keeping up with blockbuster movies
-              and binge-worthy shows, and reading about technology, business,
-              and politics.
-            </p>
           </div>
         </div>
       </section>
       <section
         id="experience"
-        className="relative top-0 left-0 flex w-full flex-col gap-16"
+        className="flex h-full min-h-screen w-full items-center justify-center p-4"
       >
-        <h3 className="sticky top-0 z-30 w-full bg-neutral-100 p-4 text-center uppercase">
-          Experience
-        </h3>
-        <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <h2 className="w-full self-center text-center text-4xl uppercase">
-            Industry
-          </h2>
-          <a
-            className="group relative top-0 left-0 mx-auto block w-[calc(100%-16px)] max-w-[calc(1024px-16px)] self-start border border-transparent focus:border focus:border-black focus:ring-0 focus:outline-none"
-            href="https://www.onswitchboard.com/"
-            target="_blank"
-          >
-            <img
-              src="./images/switchboard.png"
-              className="w-full bg-white/50 object-cover object-center shadow backdrop-blur-lg"
-            />
-            <div className="absolute -top-2 -left-2 -z-10 h-4 w-4 border-t border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-            <div className="absolute -top-2 -right-2 -z-10 h-4 w-4 border-t border-r border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-            <div className="absolute -bottom-2 -left-2 -z-10 h-4 w-4 border-b border-l border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-            <div className="absolute -right-2 -bottom-2 -z-10 h-4 w-4 border-r border-b border-black transition-all duration-300 group-hover:h-full group-hover:w-full"></div>
-          </a>
-          <div className="flex w-full flex-col gap-4">
-            <p>
-              Switchboard | Vancouver, BC | 3 Years | January 2021 - December
-              2023
-            </p>
-            <ul className="flex w-full list-inside list-disc flex-col gap-4">
-              <li>
-                Communicated and collaborated with the Web, Mobile, QA, and
-                Support teams in a startup environment to build a SaaS for
-                companies in the commercial transportation industry across North
-                America, empowering them to manage their fleets while staying
-                compliant with government regulations.
-              </li>
-              <li>
-                Researched, designed, and implemented user
-                interfaces/experiences using Figma and React, improving visual
-                appearances, user interactions, and workflows.
-              </li>
-              <li>
-                Developed and improved API functionalities across microservices
-                using JavaScript, Node.js, Express.js, and Parse Platform,
-                speeding up execution times by 2x and delivering accurate data.
-              </li>
-              <li>
-                Managed projects using Jira, Bitbucket, and Confluence to
-                organize, document, and complete tasks within sprint intervals,
-                increasing team efficiency and release of features and bug fixes
-                by 10%.
-              </li>
-            </ul>
+        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+          <h1 className="text-5xl lowercase sm:text-7xl">Experience</h1>
+          <div className="flex flex-col gap-4">
+            <h2 className="lowercase">
+              June 2022 - June 2025 | Digital Solutions Architect |
+              Self-employed
+            </h2>
+            <h2 className="lowercase">
+              January 2021 - December 2023 | Web Software Developer |{' '}
+              <Link
+                href="https://www.onswitchboard.com/"
+                target="_blank"
+                className="underline transition-all hover:text-sky-500"
+              >
+                Switchboard
+              </Link>
+            </h2>
           </div>
+          <Link
+            onMouseDown={(event) => event.preventDefault()}
+            className="block items-center justify-center self-start border border-black p-4 text-center text-xs lowercase transition-all hover:bg-black hover:text-white focus:z-50 focus:border-black focus:ring-0 focus:outline-0 rounded"
+            href="https://docs.google.com/document/d/1556_mPAxeexguFJGg-k6Kg3q0U8zdiHWkyLg1vZ53f4/export?format=pdf"
+          >
+            Download Resume
+          </Link>
         </div>
-        <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <h2 className="w-full self-center text-center text-4xl uppercase">
-            Freelance
-          </h2>
-        </div>
-        <HorizontalScrollGrid>
-          {freelanceItems.map((item, index) => (
-            <HorizontalScrollCard key={index} item={item} />
-          ))}
-        </HorizontalScrollGrid>
-        <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <h2 className="w-full self-center text-center text-4xl uppercase">
-            Projects
-          </h2>
-        </div>
-        <HorizontalScrollGrid>
-          {projectItems.map((item, index) => (
-            <HorizontalScrollCard key={index} item={item} />
-          ))}
-        </HorizontalScrollGrid>
       </section>
       <section
-        id="contact"
-        className="relative top-0 left-0 flex w-full flex-col gap-16"
+        id="projects"
+        className="flex h-full min-h-screen w-full items-center justify-center p-4"
       >
-        <h3 className="sticky top-0 z-30 w-full bg-neutral-100 p-4 text-center uppercase">
-          Contact
-        </h3>
-        <div className="mx-auto flex max-w-[1024px] flex-col gap-16 px-4">
-          <div className="flex flex-col gap-8">
-            <h2 className="w-full self-center text-center text-4xl uppercase">
-              Let's Connect!
-            </h2>
-            <p>
-              I am seeking a professional opportunity as a software developer in
-              North America and would love to meet and discuss more about my
-              qualifications and how I can help your team and business.
-            </p>
-          </div>
-          <div className="flex w-full flex-col gap-8">
-            <Anchor to="mailto: hsnfwz99@gmail.com">Email</Anchor>
-            <Anchor to="https://www.linkedin.com/in/hsnfwz/" target="_blank">
-              LinkedIn
-            </Anchor>
-            <Anchor to="https://github.com/hsnfwz" target="_blank">
-              GitHub
-            </Anchor>
-            <Anchor to="https://docs.google.com/document/d/1mSE5ze5_DX32lnXj1PkR6NM3aipGZoBAb5aLEFiAiOc/export?format=pdf">
-              Resume
-            </Anchor>
+        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+          <h1 className="text-5xl lowercase sm:text-7xl">Projects</h1>
+          <h2 className="lowercase">
+            Specialized in Figma, HTML, CSS, Tailwind CSS, JavaScript,
+            TypeScript, React, Next.js, Node.js, Express.js, SQL, Supabase,
+            Neon, and Vercel | Learning React Native and Expo
+          </h2>
+          <div className="grid w-full grid-cols-1 gap-8 rounded-2xl bg-neutral-100 p-8 sm:grid-cols-2">
+            <div className="flex w-full flex-col gap-4">
+              <video
+                className="w-full bg-black border border-black rounded"
+                src="/rembump_demo.mp4"
+                width=""
+                height=""
+                muted
+                controls
+                autoPlay
+                loop
+              >
+                <source src="/rembump_demo.mp4" type="video/mp4" />
+              </video>
+              <h2 className="lowercase">
+                <Link
+                  href="https://www.rembump.com/"
+                  target="_blank"
+                  className="self-start lowercase underline transition-all hover:text-sky-500"
+                >
+                  RemBump
+                </Link>{' '}
+                | the smart music therapy experience
+              </h2>
+            </div>
+            <div className="flex w-full flex-col gap-4">
+              <video
+                className="w-full bg-black border border-black rounded"
+                src="/noureddinefeathers_demo.mp4"
+                width=""
+                height=""
+                muted
+                controls
+                autoPlay
+                loop
+              >
+                <source src="/noureddinefeathers_demo.mp4" type="video/mp4" />
+              </video>
+              <h2 className="lowercase">
+                <Link
+                  href="https://www.noureddinefeathers.com/"
+                  target="_blank"
+                  className="self-start lowercase underline transition-all hover:text-sky-500"
+                >
+                  Noureddine Feathers
+                </Link>{' '}
+                | shop high quality ostrich feather dusters
+              </h2>
+            </div>
+            <div className="flex w-full flex-col gap-4">
+              <video
+                className="w-full bg-black border border-black rounded"
+                src="/filmfest_demo.mp4"
+                width=""
+                height=""
+                muted
+                controls
+                autoPlay
+                loop
+              >
+                <source src="/filmfest_demo.mp4" type="video/mp4" />
+              </video>
+              <h2 className="lowercase">
+                <Link
+                  href="https://filmfest-2025.vercel.app/"
+                  target="_blank"
+                  className="self-start lowercase underline transition-all hover:text-sky-500"
+                >
+                  FilmFest
+                </Link>{' '}
+                | track and rate movies with your friends
+              </h2>
+            </div>
+            <div className="flex w-full flex-col gap-4">
+              <video
+                className="w-full bg-black border border-black rounded"
+                src="/cellystats_demo.mp4"
+                width=""
+                height=""
+                muted
+                controls
+                autoPlay
+                loop
+              >
+                <source src="/cellystats_demo.mp4" type="video/mp4" />
+              </video>
+              <h2 className="lowercase">
+                <Link
+                  href="https://cellystats.vercel.app/"
+                  target="_blank"
+                  className="self-start lowercase underline transition-all hover:text-sky-500"
+                >
+                  CellyStats
+                </Link>{' '}
+                | view and compare hockey player statistics
+              </h2>
+            </div>
+            <div className="flex w-full flex-col gap-4">
+              <video
+                className="w-full bg-black border border-black rounded"
+                src="/quickreport_demo.mp4"
+                width=""
+                height=""
+                muted
+                controls
+                autoPlay
+                loop
+              >
+                <source src="/quickreport_demo.mp4" type="video/mp4" />
+              </video>
+              <h2 className="lowercase">
+                <Link
+                  href="https://quickreport-v1.vercel.app/"
+                  target="_blank"
+                  className="self-start lowercase underline transition-all hover:text-sky-500"
+                >
+                  QuickReport
+                </Link>{' '}
+                | convert CSV files to polished PDF files
+              </h2>
+            </div>
+            <div className="flex w-full flex-col gap-4">
+              <video
+                className="w-full bg-black border border-black rounded"
+                src="/quickchart_demo.mp4"
+                width=""
+                height=""
+                muted
+                controls
+                autoPlay
+                loop
+              >
+                <source src="/quickchart_demo.mp4" type="video/mp4" />
+              </video>
+              <h2 className="lowercase">
+                <Link
+                  href="https://quickchart-v1.vercel.app/"
+                  target="_blank"
+                  className="self-start lowercase underline transition-all hover:text-sky-500"
+                >
+                  QuickChart
+                </Link>{' '}
+                | generate bar, line, and area charts and save as PNG or JPG
+              </h2>
+            </div>
           </div>
         </div>
       </section>
-      <footer className="flex flex-col items-center justify-center p-4">
-        <p className="text-center text-xs">Copyright 2025 Hussein Fawaz</p>
+      {/* <div className="p-4">
+        <div className="m-auto flex h-[1px] w-full max-w-[1024px] items-center justify-center rounded-full bg-neutral-100 text-9xl font-bold text-neutral-100">
+          3
+        </div>
+      </div> */}
+      <section
+        id="contact"
+        className="flex h-full min-h-screen w-full items-center justify-center p-4"
+      >
+        <div className="m-auto flex w-full max-w-[1024px] flex-col gap-8">
+          <h1 className="text-5xl lowercase sm:text-7xl">Contact</h1>
+          <div className="flex flex-col gap-4">
+            <h2 className="lowercase">
+              email |{' '}
+              <Link
+                href="mailto: hsnfwz99@gmail.com"
+                className="underline transition-all hover:text-sky-500"
+              >
+                hsnfwz99@gmail.com
+              </Link>
+            </h2>
+            <h2 className="lowercase">
+              LinkedIn |{' '}
+              <Link
+                href="https://www.linkedin.com/in/hsnfwz/"
+                target="_blank"
+                className="underline transition-all hover:text-sky-500"
+              >
+                /in/hsnfwz
+              </Link>
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <footer className="m-auto w-full max-w-[1024px] p-4">
+        <h2 className="text-xs lowercase">Copyright 2025 Hussein Fawaz</h2>
       </footer>
     </main>
   );
