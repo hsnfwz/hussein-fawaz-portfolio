@@ -275,8 +275,17 @@ export default function Home() {
           <h1 className="text-5xl lowercase sm:text-7xl">Experience</h1>
           <div className="flex flex-col gap-4">
             <h2 className="lowercase">
-              June 2022 - June 2025 | Digital Solutions Architect |
-              Self-employed
+              August 2025 - Present | Instructor | Code Ninjas
+            </h2>
+            <h2 className="lowercase">
+              June 2022 - Present | Full Stack Software Developer |{' '}
+              <Link
+                href="https://jennacoles.webflow.io/"
+                target="_blank"
+                className="underline transition-all hover:text-sky-500"
+              >
+                Jenna Coles Design
+              </Link>
             </h2>
             <h2 className="lowercase">
               January 2021 - December 2023 | Web Software Developer |{' '}
