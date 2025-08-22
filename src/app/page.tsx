@@ -275,7 +275,14 @@ export default function Home() {
           <h1 className="text-5xl lowercase sm:text-7xl">Experience</h1>
           <div className="flex flex-col gap-4">
             <h2 className="lowercase">
-              August 2025 - Present | Instructor | Code Ninjas
+              August 2025 - Present | Instructor |{' '}
+              <Link
+                href="https://www.codeninjas.com/"
+                target="_blank"
+                className="underline transition-all hover:text-sky-500"
+              >
+                Code Ninjas
+              </Link>
             </h2>
             <h2 className="lowercase">
               June 2022 - Present | Full Stack Software Developer |{' '}
