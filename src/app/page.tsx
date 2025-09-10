@@ -67,7 +67,7 @@ export default function Home() {
               </h2>
               <h3 className="text-center">Instructor</h3>
               <h3 className="text-center">Burnaby, BC</h3>
-              <h3 className="text-center">August 2025 - Present</h3>
+              <h3 className="text-center">September 2025 - Present</h3>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="text-center text-2xl lowercase md:text-5xl">
@@ -75,7 +75,7 @@ export default function Home() {
               </h2>
               <h3 className="text-center">Full-Stack Software Developer</h3>
               <h3 className="text-center">Toronto, ON</h3>
-              <h3 className="text-center">June 2022 - Present</h3>
+              <h3 className="text-center">April 2025 - Present</h3>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="text-center text-2xl lowercase md:text-5xl">
