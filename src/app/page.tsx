@@ -44,7 +44,7 @@ export default function Home() {
           <h1 className="text-center text-5xl lowercase md:text-8xl">
             Hussein Fawaz
             <br />
-            Full-Stack Software Developer
+            full stack Software Developer
           </h1>
           <h2 className="text-center text-2xl lowercase md:text-5xl">
             4 Years Professional Experience Designing and Building Exceptional
@@ -73,7 +73,7 @@ export default function Home() {
               <h2 className="text-center text-2xl lowercase md:text-5xl">
                 Jenna Coles Design
               </h2>
-              <h3 className="text-center">Full-Stack Software Developer</h3>
+              <h3 className="text-center">full stack Software Developer</h3>
               <h3 className="text-center">Toronto, ON</h3>
               <h3 className="text-center">April 2025 - Present</h3>
             </div>
