@@ -8,28 +8,28 @@ export default function Home() {
         <div className="m-auto flex w-full max-w-[1280px] items-center">
           <Link
             onMouseDown={(event) => event.preventDefault()}
-            className="block items-center justify-center border-y-2 border-transparent p-4 text-center lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
             href="#home"
           >
             <span className="font-bold">Hussein Fawaz</span>
           </Link>
           <Link
             onMouseDown={(event) => event.preventDefault()}
-            className="ml-auto block items-center justify-center border-y-2 border-transparent p-4 text-center lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            className="ml-auto block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
             href="#experience"
           >
             Experience
           </Link>
           <Link
             onMouseDown={(event) => event.preventDefault()}
-            className="block items-center justify-center border-y-2 border-transparent p-4 text-center lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
             href="#projects"
           >
             Projects
           </Link>
           <Link
             onMouseDown={(event) => event.preventDefault()}
-            className="block items-center justify-center border-y-2 border-transparent p-4 text-center lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
+            className="block items-center justify-center border-y-2 border-transparent p-4 text-center text-xs lowercase transition-all hover:border-b-black focus:z-50 focus:border-black focus:ring-0 focus:outline-0"
             href="#contact"
           >
             Contact
