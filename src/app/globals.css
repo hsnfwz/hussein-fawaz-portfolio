@@ -11,6 +11,11 @@
   --font-bodoni: 'Bodoni Moda';
 }
 
+body {
+  background-color: black;
+  color: white;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -37,14 +42,6 @@ h3 {
 
 button,
 a {
-  font-family: var(--font-montserrat);
-  font-weight: var(--font-weight-normal);
-}
-
-span,
-p,
-ul,
-li {
   font-family: var(--font-montserrat);
   font-weight: var(--font-weight-normal);
 }
