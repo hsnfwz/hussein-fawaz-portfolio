@@ -122,7 +122,7 @@ export default function Home() {
                 <h2 className="text-center text-2xl lowercase md:text-5xl">
                   RemBump
                 </h2>
-                <h3 className="text-center">
+                <h3 className="text-center lowercase">
                   the smart music therapy experience
                 </h3>
               </div>
@@ -151,7 +151,7 @@ export default function Home() {
                 <h2 className="text-center text-2xl lowercase md:text-5xl">
                   Noureddine Feathers
                 </h2>
-                <h3 className="text-center">
+                <h3 className="text-center lowercase">
                   shop high quality ostrich feather dusters
                 </h3>
               </div>
@@ -180,7 +180,7 @@ export default function Home() {
                 <h2 className="text-center text-2xl lowercase md:text-5xl">
                   FilmFest
                 </h2>
-                <h3 className="text-center">
+                <h3 className="text-center lowercase">
                   track and rate movies with your friends
                 </h3>
               </div>
@@ -209,7 +209,7 @@ export default function Home() {
                 <h2 className="text-center text-2xl lowercase md:text-5xl">
                   cellystats
                 </h2>
-                <h3 className="text-center">
+                <h3 className="text-center lowercase">
                   view and compare hockey player statistics
                 </h3>
               </div>
@@ -239,7 +239,7 @@ export default function Home() {
                 <h2 className="text-center text-2xl lowercase md:text-5xl">
                   QuickReport
                 </h2>
-                <h3 className="text-center">
+                <h3 className="text-center lowercase">
                   convert CSV files to polished PDF files
                 </h3>
               </div>
@@ -268,7 +268,7 @@ export default function Home() {
                 <h2 className="text-center text-2xl lowercase md:text-5xl">
                   QuickChart
                 </h2>
-                <h3 className="text-center">
+                <h3 className="text-center lowercase">
                   generate bar, line, and area charts and save as PNG or JPG
                 </h3>
               </div>
