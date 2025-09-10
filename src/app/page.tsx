@@ -65,25 +65,25 @@ export default function Home() {
               <h2 className="text-center text-2xl lowercase md:text-5xl">
                 Code Ninjas
               </h2>
-              <h3 className="text-center">Instructor</h3>
-              <h3 className="text-center">Burnaby, BC</h3>
-              <h3 className="text-center">September 2025 - Present</h3>
+              <h3 className="text-center lowercase">Instructor</h3>
+              <h3 className="text-center lowercase">Burnaby, BC</h3>
+              <h3 className="text-center lowercase">September 2025 - Present</h3>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="text-center text-2xl lowercase md:text-5xl">
                 Jenna Coles Design
               </h2>
-              <h3 className="text-center">full stack Software Developer</h3>
-              <h3 className="text-center">Toronto, ON</h3>
-              <h3 className="text-center">April 2025 - Present</h3>
+              <h3 className="text-center lowercase">full stack Software Developer</h3>
+              <h3 className="text-center lowercase">Toronto, ON</h3>
+              <h3 className="text-center lowercase">April 2025 - Present</h3>
             </div>
             <div className="flex flex-col gap-4">
               <h2 className="text-center text-2xl lowercase md:text-5xl">
                 Switchboard
               </h2>
-              <h3 className="text-center">Web Software Developer</h3>
-              <h3 className="text-center">Vancouver, BC</h3>
-              <h3 className="text-center">January 2021 - December 2023</h3>
+              <h3 className="text-center lowercase">Web Software Developer</h3>
+              <h3 className="text-center lowercase">Vancouver, BC</h3>
+              <h3 className="text-center lowercase">January 2021 - December 2023</h3>
             </div>
           </div>
           <Link
