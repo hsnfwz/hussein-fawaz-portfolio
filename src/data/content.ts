@@ -36,7 +36,18 @@ export const site = {
     'https://docs.google.com/document/d/1556_mPAxeexguFJGg-k6Kg3q0U8zdiHWkyLg1vZ53f4/export?format=pdf',
 };
 
+/** Listed newest first (the page also sorts by start date). */
 export const experience: Role[] = [
+  {
+    company: 'Conversion',
+    logo: '/logos/conversion.jpeg',
+    title: 'Web Developer',
+    linkedin: 'https://www.linkedin.com/company/conversion-factory/',
+    location: 'Vancouver, BC',
+    summary:
+      'Today at Conversion, part of GAIN, I build website experiments that help global brands like Universal, Microsoft and Nike improve their conversion rates.',
+    start: '2025-10',
+  },
   {
     company: 'Switchboard',
     logo: '/logos/switchboard.jpeg',
@@ -47,16 +58,6 @@ export const experience: Role[] = [
       'At Switchboard, I built web software for a fleet management platform that helps trucking companies track vehicles, manage drivers and stay compliant.',
     start: '2021-01',
     end: '2023-12',
-  },
-  {
-    company: 'Conversion',
-    logo: '/logos/conversion.jpeg',
-    title: 'Web Developer',
-    linkedin: 'https://www.linkedin.com/company/conversion-factory/',
-    location: 'Vancouver, BC',
-    summary:
-      'Today at Conversion, part of GAIN, I build website experiments that help global brands like Universal, Microsoft and Nike improve their conversion rates.',
-    start: '2025-10',
   },
 ];
 

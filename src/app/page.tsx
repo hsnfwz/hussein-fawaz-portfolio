@@ -15,6 +15,12 @@ import {
 } from '@/data/content';
 import { siteUrl } from '@/lib/site-url';
 
+// Newest role first, regardless of the order roles are written in.
+// ISO YYYY-MM strings sort correctly as plain strings.
+const experienceNewestFirst = [...experience].sort((a, b) =>
+  b.start.localeCompare(a.start)
+);
+
 // Structured data so search engines understand who the site is about.
 const currentRole = experience.find((role) => !role.end);
 const personJsonLd = {
@@ -78,7 +84,7 @@ export default function Home() {
 
         <Section id="experience" title="Experience" intro={experienceIntro}>
           <ul className="font-heading grid w-full grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {experience.map((role) => (
+            {experienceNewestFirst.map((role) => (
               <li
                 key={`${role.company}-${role.start}`}
                 className="reveal-on-scroll"
