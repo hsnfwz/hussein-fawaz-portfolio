@@ -1,0 +1,14 @@
+import type { MetadataRoute } from 'next';
+import { siteUrl } from '@/lib/site-url';
+
+/** sitemap.xml: a single-page site, so one entry. */
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: siteUrl.href,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 1,
+    },
+  ];
+}
