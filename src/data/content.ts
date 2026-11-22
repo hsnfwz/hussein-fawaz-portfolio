@@ -63,6 +63,14 @@ export const experience: Role[] = [
 
 export const projects: Project[] = [
   {
+    name: 'Word Run',
+    description:
+      'The forest is flooding! Spell words to rebuild the path and save your little guy. How far can you run?',
+    url: 'https://www.wordrun.ca/',
+    video: '/videos/wordrun.mp4',
+    poster: '/videos/wordrun.jpg',
+  },
+  {
     name: 'RemBump',
     description: 'The smart music therapy experience',
     url: 'https://www.rembump.com/',
